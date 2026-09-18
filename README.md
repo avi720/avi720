@@ -1,16 +1,113 @@
-## Hi there 👋
+<div align="right">
 
-<!--
-**avi720/avi720** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# אביאור פז
 
-Here are some ideas to get you started:
+### מפתח Full-stack שבונה כלים מבוססי נתונים — Next.js, Python, אוטומציה פיננסית
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+אני בונה מוצרים שעובדים מקצה לקצה. שחררתי SaaS בתשלום שמסנכרן נתוני ברוקר
+אמיתיים, ואפליקציית קהילה בשימוש פעיל. React/Next.js מלפנים, Python ו-Postgres
+מאחורה, כולל הצפנה, חיוב ותחזוקה — לא דמו שנשאר בברנץ'.
+
+📍 באר שבע · 🌐 [avi720.github.io](https://avi720.github.io) · ✉️ [avi.paz159@gmail.com](mailto:avi.paz159@gmail.com)
+
+---
+
+## קצת עליי
+
+הגעתי לתוכנה דרך בעיה קונקרטית, לא דרך קורס. עקבתי אחרי העסקאות שלי בין דוחות
+ברוקר לגיליונות אלקטרוניים, המספרים אף פעם לא הסתדרו, והכלים שהיו קיימים היו
+או כבדים מדי או טיפשיים מדי. אז בניתי את הכלי שהייתי צריך.
+
+זה עיצב את הדרך שבה אני עובד. אני מתחיל מהנתונים — איך הם באמת נראים, איפה הם
+נשברים, מה מקרי הקצה — ומתכנן אחורה משם. התאמת פוזיציות ב-FIFO, הצפנת טוקנים
+של ברוקר, ג'ובים מתוזמנים שצריכים לשרוד קריאת API שנכשלה: החלקים הלא-זוהרים הם
+המקום שבו העבודה האמיתית נמצאת.
+
+אני עובד לרוחב הסטאק כי הבעיות המעניינות יושבות בתפרים. דשבורד הוא רק כן כמו
+הפייפליין שמזין אותו, וג'וב סנכרון שווה משהו רק אם מישהו יכול לקרוא את מה שהוא ייצר.
+
+כרגע בונה את **Trade Analyst** — יומן מסחר עם AI — ומתחזק את **Commun-It-Is**,
+אפליקציית קהילה בשימוש פעיל.
+
+---
+
+## פרויקטים נבחרים
+
+### 📊 [Trade Analyst](https://github.com/avi720/trade-analyst)
+**מוצר SaaS חי בתשלום — יומן מסחר עם AI שמסנכרן אוטומטית מ-Interactive Brokers.**
+
+`Next.js 14` · `TypeScript` · `Supabase/Postgres` · `IBKR Flex API` · `Google Gemini`
+
+החלק הקשה לא היה הממשק — אלא לגרום למספרים להיות *נכונים*. דוחות ברוקר מגיעים
+כרשימת טרנזקציות שטוחה בלי מושג של פוזיציה, אז מימשתי התאמת לוטים ב-FIFO כדי לגזור
+רווח והפסד ממומש ולא-ממומש מתוך fills גולמיים, ומעליה שכבת אנליטיקה: R-multiples,
+win-rate, max drawdown, והתפלגות ביצועים לפי setup ולפי שעה ביום.
+
+מעל זה יושבות ההחלטות שמוצר בתשלום מחייב: טוקני IBKR Flex מוצפנים ב-AES-256-GCM
+לפני שהם נוגעים במסד, הרשאות נאכפות ב-Row-Level Security כך שכל שאילתה רואה רק את
+השורות של המשתמש שלה, והסנכרון היומי רץ כ-GitHub Actions workflow במקום cron של
+Vercel — אותה אמינות, בלי לשלם על התוכנית העסקית. "חנן", עוזר ה-AI מבוסס Gemini,
+עונה מול הסטטיסטיקה האמיתית של המשתמש ולא מהזיכרון. כל הממשק נבנה RTL מהיסוד —
+טבלאות, גרפים, פורמט מספרים ומיילים.
+
+[המוצר החי — tradeanalyst.app](https://tradeanalyst.app) · [קוד מקור](https://github.com/avi720/trade-analyst)
+
+---
+
+### 🏘️ [Commun-It-Is](https://github.com/avi720/Commun-It-Is)
+**אפליקציית קהילה — טרמפים, פוסטים, ספר טלפונים והתראות פוש. בשימוש פעיל.**
+
+`React + Vite` · `FastAPI` · `Supabase` · `Google Maps` · `Capacitor`
+
+מוצר שלם, לא הדגמה: אימות משתמשים, לוח טרמפים משותף עם אינטגרציית מפות,
+ספר טלפונים קהילתי, והתראות פוש דרך Firebase. הכל נפרס כפרויקט Vercel אחד
+כשה-backend ב-FastAPI רץ כפונקציה serverless וניתוב ה-SPA נופל חזרה ל-React Router —
+מה שחייב לסדר נכון את הראוטינג, את הפרדת משתני הסביבה (משתני `VITE_` בזמן בנייה
+מול סודות שרת בזמן ריצה) ואת הגבול של מפתח ה-service role, כך שהדפדפן לעולם לא
+נוגע בהרשאות מיוחסות. גרסת האנדרואיד עוטפת את אותו אתר מפורסם עם Capacitor.
+
+[הדגמה חיה](https://commun-it-is.vercel.app) · [קוד מקור](https://github.com/avi720/Commun-It-Is)
+
+---
+
+### 🤖 Trading Agent — קוד סגור
+**סוכן מסחר אוטונומי על חשבון נייר — רוטינות, חוקי כניסה ויציאה, אסטרטגיה ויומן ריצה.**
+
+`Python`
+
+המשך טבעי של Trade Analyst: אם היומן עונה על "מה עבד לי", הסוכן בודק
+"האם חוקים מפורשים מחזיקים מים כשמריצים אותם בלי יד אנושית". רץ על חשבון
+נייר בלבד, עם רוטינות מתוזמנות ויומן שמתעד כל החלטה.
+
+*הרפו פרטי. הדגמה וסיור בקוד לפי בקשה.*
+
+---
+
+## מיומנויות
+
+**עיקרי** — TypeScript · React / Next.js · Python (FastAPI) · PostgreSQL / Supabase
+
+**משני** — פריסות Vercel ו-serverless · GitHub Actions CI/CD · REST ו-APIs פיננסיים (IBKR, Polygon) · Capacitor
+
+**בלמידה** — דפוסי אפליקציות LLM · בדיקות לפייפליין נתונים
+
+---
+
+## GitHub
+
+<p>
+  <img height="150" alt="סטטיסטיקות GitHub של avi720"
+       src="https://github-readme-stats.vercel.app/api?username=avi720&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&locale=he" />
+  <img height="150" alt="שפות מובילות"
+       src="https://github-readme-stats.vercel.app/api/top-langs/?username=avi720&layout=compact&theme=tokyonight&hide_border=true&locale=he" />
+</p>
+
+---
+
+## יצירת קשר
+
+הדרך המהירה ביותר להשיג אותי: **[avi.paz159@gmail.com](mailto:avi.paz159@gmail.com)**
+
+[לינקדאין](https://www.linkedin.com/in/%D7%90%D7%91%D7%99%D7%90%D7%95%D7%A8-%D7%A4%D7%96-5469b629a/) · [GitHub](https://github.com/avi720) · [פורטפוליו](https://avi720.github.io)
+
+</div>
