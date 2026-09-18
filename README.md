@@ -93,17 +93,6 @@ Vercel — אותה אמינות, בלי לשלם על התוכנית העסקי
 
 ---
 
-## GitHub
-
-<p>
-  <img height="150" alt="סטטיסטיקות GitHub של avi720"
-       src="https://github-readme-stats.vercel.app/api?username=avi720&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&locale=he" />
-  <img height="150" alt="שפות מובילות"
-       src="https://github-readme-stats.vercel.app/api/top-langs/?username=avi720&layout=compact&theme=tokyonight&hide_border=true&locale=he" />
-</p>
-
----
-
 ## יצירת קשר
 
 הדרך המהירה ביותר להשיג אותי: **[avi.paz159@gmail.com](mailto:avi.paz159@gmail.com)**
