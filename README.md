@@ -5,10 +5,9 @@
 ### מפתח Full-stack שבונה כלים מבוססי נתונים — Next.js, Python, אוטומציה פיננסית
 
 אני בונה מוצרים שעובדים מקצה לקצה. שחררתי SaaS בתשלום שמסנכרן נתוני ברוקר
-אמיתיים, ואפליקציית קהילה. React/Next.js מלפנים, Python ו-Postgres
-מאחורה, כולל הצפנה, חיוב ותחזוקה — לא דמו שנשאר בברנץ'.
+אמיתיים, ובתהליך בניה של אפליקציית קהילה ואתר לסימולמיות פיזיקליות.
 
-📍 באר שבע · 🌐 [avi720.github.io](https://avi720.github.io) · ✉️ [avi.paz159@gmail.com](mailto:avi.paz159@gmail.com)
+📍 עזריקם · 🌐 [avi720.github.io](https://avi720.github.io) · ✉️ [avi.paz159@gmail.com](mailto:avi.paz159@gmail.com)
 
 ---
 
