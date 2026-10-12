@@ -97,16 +97,6 @@ append-only, רשומת פוזיציה לכל מה שהברוקר לא שומר 
 
 ---
 
-## מיומנויות
-
-**עיקרי** — TypeScript · React / Next.js · Python (FastAPI) · PostgreSQL / Supabase
-
-**משני** — פריסות Vercel ו-serverless · GitHub Actions CI/CD · REST ו-APIs פיננסיים (IBKR, Polygon) · Capacitor
-
-**בלמידה** — דפוסי אפליקציות LLM · בדיקות לפייפליין נתונים
-
----
-
 ## יצירת קשר
 
 הדרך המהירה ביותר להשיג אותי: **[avi.paz159@gmail.com](mailto:avi.paz159@gmail.com)**
